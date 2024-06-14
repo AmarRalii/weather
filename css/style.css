@@ -40,8 +40,7 @@ section{
     font-size: 13.4px;
   }
   .cards{
-    display: flex;
-    justify-content: center;
+ 
   }
   .card{
     width: 29em;
