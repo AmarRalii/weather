@@ -27,7 +27,7 @@ async function gitweatherData(cityName){
 
 
 // Todays weather
-
+  
 function displayTodayData(data){
     let todayDate = new Date()
     todayName.innerHTML = todayDate.toLocaleDateString("en-US",{weekday:"long",})
