@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Weather App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Weather App</title>
 </head>
+
 <body>
-    <section class=" ">
-        <nav class="navbar navbar-expand-lg   ">
-            <div class="container-fluid d-flex justify-content-center">
-              <a class="navbar-brand fw-bolder fs-2 text-white" href="#">Weather App<img src="296.webp" alt="" class="bg-"></a> 
-            </div>
-          </nav>
-        <div class="container vh-100 pt-5">
+  <section class="">
 
-          <div class="InputContainer ">
-            
-            <input type="text" class="input w-100 rounded-5 py-2 bg-light text-dark border-0  ms-3 me-3" id="search" placeholder=" Find your location ...">
-          </div>
-            <br>
-            <br>
-            
-   
-            <div class="cards d-flex justify-content-center" >
-                <div class="card  bg-transparent text-white me-3 border-2 border-white " >
-                    <div class="card-body">
-                      <h5 class="d-flex justify-content-between border-bottom mb-4 border-2 border-white  text-white "><div class="day" id="todayName">Sunday</div> <span id="todayNumbre" class="ps-5">25 </span><span id="todaMonth"></span></h5>
-                      <h6 class="card-subtitle mb-2 text-" id="todayLocation">Cairo</h6>
-                      <h5 class="d-flex justify-content-between fs-1"><div class="day" id="todayTemp">20 </div><span><sub class="-5">o</sub> C</span><br> <img src="296.webp" alt="" id="todaycondetionImg"></div></h5>
-                      <p href="#" class="ps-3 fw-bold  " id="todaycondetionText"> Sunny</p>
-                      <div class="last  d-flex justify-content-around ">
-                        <p> <i class="fa-solid fa-umbrella " id="humidity"> 20</i> <span>%</span> </p>
-                        <p> <i class="fa-solid fa-wind" id="wind"> 30 </i><span> km/h</span></p>
-                        <p > <i class="fa-solid fa-compass" id="windDirection"> N N E</i></p>
-                      </div>
-                    </div>
-                  
-                <div class="card text-white me-3 bg-transparent border-2 border-white" >
-                    <div class="card-body text-center">
-                      <h5 class="d-flex justify-content-center border-bottom mb-4 border-2 border-white    next-day-name" > Friday </h5>
-                      <h1><img src="296.webp" alt="" class="next-Condition-Img"></h1>
-                      <h4 class=" fs-2  next-max-temp"> 10 </h4><span>highest</span>
-                      <h5 class=" fs-2 next-min-temp" > 5 </h5><span>Lowest</span>
-                      <p href="#" class="card-link next-Condition-text fw-bold text-">Sunny</p>
-                     
-                    </div>
-                  </div>
-                <div class="card text-white me-3 bg-transparent border-2 border-white" >
-                    <div class="card-body text-center">
-                      <h5 class="d-flex justify-content-center border-bottom mb-4 border-2 border-white  text-white  next-day-name" > Friday </h5>
-                      <h1 class="card-subtitle mb-2 "><img src="296.webp" alt="" class="next-Condition-Img"></h1>
-                      <h5 class=" fs-2  next-max-temp"> 10 C</h5><span>highest</span>
-                      <h5 class=" fs-2 next-min-temp" >10 C</h5><span>Lowest</span>
-                      <p href="#" class="card-link next-Condition-text fw-bold ">Sunny</p>
-                     
-                    </div>
-                  </div>
-                
-               
-                  </div>
-                
-            </div>
-
-
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container d-flex ">
+        <a class="navbar-brand fw-bolder fs-2 text-white " href="#">Weather</a>
+      </div>
+    </nav>
+    <div class="container position-relative vh-100 pt-5">
+      <div class="layer">
+        <div class="InputContainer ">
+          <input type="text" class="input w-100 rounded-5 py-2 bg-light text-dark border-0  ms-3 me-3" id="search"
+            placeholder=" Find your location ...">
         </div>
-    </section>
-    <script src="Js/jquery-3.7.1.min.js"></script>
-    <script src="Js/index.js"></script>
+        <br>
+        <br>
+        <div class="cards d-flex justify-content-center">
+          <div class="card  bg-dark text-white me-3 border-2 border-white ">
+            <div class="card-body">
+              <h5 class="d-flex justify-content-between border-bottom mb-4 border-2 border-white  text-white ">
+                <div class="day" id="todayName">Sunday</div> <span id="todayNumbre" class="ps-5">25 </span><span
+                  id="todaMonth"></span>
+              </h5>
+              <h6 class="card-subtitle mb-2 text-" id="todayLocation">Cairo</h6>
+              <div>
+              <img src="296.webp" alt="" id="todaycondetionImg">
+            </div>
+              <h5 class="d-flex justify-content-center fle fs-1">
+                <div class="day" id="todayTemp">20 </div><span><sub class="-5">o</sub> C</span> 
+            </div>
+            
+            </h5>
+            <p href="#" class="ps-3 fw-bold  " id="todaycondetionText"> Sunny</p>
+            <div class="last  d-flex justify-content-around ">
+              <p> <i class="fa-solid fa-umbrella " id="humidity"> 20</i> <span>%</span> </p>
+              <p> <i class="fa-solid fa-wind" id="wind"> 30 </i><span> km/h</span></p>
+              <p> <i class="fa-solid fa-compass" id="windDirection"> N N E</i></p>
+            </div>
+          </div>
+
+          <div class="card text-white me-3  border-2 border-white bg-dark">
+            <div class="card-body text-center">
+              <h5 class="d-flex justify-content-center border-bottom mb-4 border-2 border-white    next-day-name">
+                Friday </h5>
+              <h1><img src="296.webp" alt="" class="next-Condition-Img"></h1>
+              <h4 class=" fs-2  next-max-temp"> 10 </h4><span>highest</span>
+              <h5 class=" fs-2 next-min-temp"> 5 </h5><span>Lowest</span>
+              <p href="#" class="card-link next-Condition-text fw-bold text-">Sunny</p>
+
+            </div>
+          </div>
+          <div class="card text-white me-3 bg-dark border-2 border-white">
+            <div class="card-body text-center">
+              <h5
+                class="d-flex justify-content-center border-bottom mb-4 border-2 border-white  text-white  next-day-name">
+                Friday </h5>
+              <h1 class="card-subtitle mb-2 "><img src="296.webp" alt="" class="next-Condition-Img"></h1>
+              <h5 class=" fs-2  next-max-temp"> 10 C</h5><span>highest</span>
+              <h5 class=" fs-2 next-min-temp">10 C</h5><span>Lowest</span>
+              <p href="#" class="card-link next-Condition-text fw-bold ">Sunny</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer bg-dark">
+      <h5>Copyright © 2024 by Amar | All Rights Reserved</h5>
+    </div>
+  </section>
+  <script src="Js/jquery-3.7.1.min.js"></script>
+  <script src="Js/index.js"></script>
 </body>
+
 </html>
